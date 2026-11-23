@@ -8,7 +8,7 @@ No network access, no dependencies beyond the standard library.
 import os
 import sys
 
-TEXT = """I opened the library book to find notes in the margins, in two hands. One asks the questions. The other answers them, in pencil, in my handwriting. I checked the card in the back. This book has never been borrowed before."""
+TEXT = "My grandmother's music box plays a tune I have never heard anywhere else. Yesterday I hummed it in a shop, and the woman behind the counter finished it. She did not look surprised."
 
 
 def main() -> int:
