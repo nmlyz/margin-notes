@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-"""Write the train-window text to entry.txt.
+"""Write the greenhouse-tomato text to entry.txt.
 
-The program holds one fixed passage and writes it unchanged on
-every run. It needs nothing but the standard library and never
-touches the network.
+The program keeps one fixed passage about a gardener who finds
+a tomato ripening in her greenhouse in January, beside a blank
+seed packet in her own handwriting, and writes that passage
+unchanged on every run. It needs nothing but the standard
+library and never touches the network.
 """
 
 from pathlib import Path
@@ -11,9 +13,9 @@ import os
 import sys
 
 PASSAGE = (
-    "She presses her forehead to the train window at 2 a.m., "
-    "her reflection sliding over dark fields, until a farmhouse "
-    "light comes on where she is sure no house stands."
+    "In January, the gardener finds a tomato ripening in the "
+    "greenhouse, red as summer, and the seed packet beside it "
+    "is blank, in her own handwriting."
 )
 
 
@@ -33,6 +35,12 @@ def destination_folder():
 
 
 def write_entry():
+    """Write PASSAGE to entry.txt, then read it back to confirm.
+
+    The write uses no trailing newline, so the file holds exactly
+    the passage and nothing else. Running the program twice
+    produces byte-identical output.
+    """
     if not passage_is_valid(PASSAGE):
         print("error: the text must be 1-280 characters and not blank",
               file=sys.stderr)
